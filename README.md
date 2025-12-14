@@ -1,4 +1,4 @@
-projeto para fazer uma analise de sensores de testes aerodinamicos simples
+projeto para fazer uma analise de sensores de testes aerodinamicos simples,
 foi feito um pequeno dataset, com objetivo de testes simples e diretos
 o nivel do projeto é de um iniciante mas pode ser futuramente adaptado em uma versão
 bem mais direta e funcional.

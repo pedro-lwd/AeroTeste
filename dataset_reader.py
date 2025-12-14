@@ -13,7 +13,6 @@ def load_exdata(csv_path: str) -> pd.DataFrame:
     
     # esquema pra organizar pelo tempo
     df = df.sort_values("time_ms").reset_index(drop=True)
-    
     return df
 
 
@@ -45,6 +44,7 @@ def apply_moving_avarage(
             .rolling(window=window_size, center=True)
             .mean()
         )
+        return df
         # ruido sem distorção do sinal, normalmente utilizado de uma forma mais complexa
         
 
@@ -61,10 +61,11 @@ def preprocess_data(csv_path : str) -> pd.DataFrame:
     inspect_data(df)
     df = handle_missing_values(df)
     df = apply_moving_avarage(df)
-    
+    return df
     
 
 if __name__ == "__main__":
     df_processed= preprocess_data("test_001.csv")
     print(df_processed)
-    
+
+
