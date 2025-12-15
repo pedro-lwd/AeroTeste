@@ -38,13 +38,16 @@ def apply_moving_avarage(
     window_size: int = 10 # 100hz = 0,1 segundos
     ) -> pd.DataFrame:
     df = df.copy()
-    for column in ["air_speed", "pressure", "downforce"]:
-        df[f"{column}_smoothed"] = (
-            df[column]
+    
+    signals =  ["air_speed", "pressure", "downforce"]
+    
+    for signal in signals:
+        df[f"{signal}_smoothed"] = (
+            df[signal]
             .rolling(window=window_size, center=True)
             .mean()
         )
-        return df
+    return df
         # ruido sem distorção do sinal, normalmente utilizado de uma forma mais complexa
         
 
