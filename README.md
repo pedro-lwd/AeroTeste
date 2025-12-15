@@ -8,5 +8,5 @@ O projeto consiste em trabalhar para resolver questões como análise de dados d
 
 Os dados são processados em um pipeline totalmente feito em python com os pacotes: Pandas, MatPlotLib e Numpy, a escolha dos fatores utilizados (Linguagem e pacotes) foi por conta de uma facilidade pessoal, e a possibilidade de tornar os algoritmos adaptados à um nível avançado.
 
-O projeto tem o intuíto de se distanciar do CRUD basico no python ja que eu não tenho paciência pra isso
+O projeto tem o intuíto pessoal de se distânciar do CRUD básico no python ja que eu não tenho paciência pra isso
 fui direto para um projeto de engenharia que pra me desafiar, nesse projeto eu tive apoio guiado de documentações de projeto anteriores a esse e de inteligencias artificiais.
