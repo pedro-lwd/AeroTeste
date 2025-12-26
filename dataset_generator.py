@@ -10,7 +10,9 @@ num_samples = duration_s * sampling_rate
 
 time_ms = np.linspace(0, duration_s * 1000, num_samples)
 
+
 # velocidade do ar (estabilização com o ramp-up [no caso vai ser a melhora no desempenho])
+# velocidade do ar é medida nesse caso aqui por metros/segundos
 
 air_speed = np.minimum(
     50,
@@ -18,12 +20,13 @@ air_speed = np.minimum(
 )
 air_speed += np.random.normal(0,0.5, num_samples)
 
-# pressão 
-
+# pressão em pascal
+ 
 pressure = 0.5* 1.225 * air_speed**2
 pressure += np.random.normal(0, 5, num_samples)
 
 # força descendente ou downforce que é o quadrado da velocidade no ar
+# medida em Newtons.
 downforce = -30 * air_speed**2
 downforce += np.random.normal(0, 50, num_samples)
 

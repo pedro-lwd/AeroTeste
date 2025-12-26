@@ -9,7 +9,7 @@ def load_exdata(csv_path: str) -> pd.DataFrame:
     if not required_columns.issubset(df.columns):
         missing = required_columns - set(df.columns)
         raise ValueError(f"Missing required columns: {missing}// Coluna(s) necessárias ausentes")
-    
+    ''
     
     # esquema pra organizar pelo tempo
     df = df.sort_values("time_ms").reset_index(drop=True)
@@ -45,9 +45,10 @@ def apply_moving_avarage(
         df[f"{signal}_smoothed"] = (
             df[signal]
             .rolling(window=window_size, center=True)
-            .mean()
+            .mean() 
         )
     return df
+    
         # ruido sem distorção do sinal, normalmente utilizado de uma forma mais complexa
         
 
